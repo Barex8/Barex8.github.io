@@ -1,0 +1,132 @@
+ul {
+  list-style-type: none; /* Elimina los puntos de la lista */
+  display: flex; /* Establece el contenedor como un contenedor flex */
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-wrap:wrap;
+  padding: 0px;
+  margin: 0px;
+  border-radius: 10px;
+  /* border: 6px  solid rgb(72, 107, 204); */
+}
+li{
+  margin: 10px;
+}
+
+.title{ 
+  font-size: 3rem; /* Tamaño grande */
+  font-weight: bold; /* Negrita */
+  background: linear-gradient(45deg, #ff6b6b, #f0e130); /* Degradado de colores */
+  -webkit-background-clip: text; /* Aplica el fondo solo al texto */
+  color: transparent; /* Hace que el texto sea transparente para que se vea el fondo */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+  letter-spacing: 2px; /* Espaciado entre letras */
+  text-align: center; /* Centrado */
+  animation: glow 1.5s ease-in-out infinite; /* Animación de resplandor */
+}
+
+/* Animación de resplandor */
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 5px #f00f0f, 0 0 10px #eb0d0d, 0 0 15px #ee2020;
+  }
+  50% {
+    text-shadow: 0 0 20px #f0e130, 0 0 30px #f0e130, 0 0 40px #f0e130;
+  }
+  100% {
+    text-shadow: 0 0 5px #f00f0f, 0 0 10px #eb0d0d, 0 0 15px #ee2020;
+  }
+}
+/* Establece que el contenedor principal ocupe toda la pantalla */
+.container {
+  display: flex; /* Usamos Flexbox para alinearlos en una fila */
+  height: 100%; /* 100% de la altura de la ventana */
+  width: 100%;
+  flex-direction: column;
+}
+
+/* Estilos para el div de la derecha */
+.principal {
+  width: 100%; 
+  height: 90%; /* Ocupa el 80% del espacio restante */
+  order: 1;
+}
+
+.itemsSelected{
+  background-color: #377EDB;
+  width: 100%; /* Ocupa el 80% del espacio restante */
+  height: 50%;
+  justify-content: space-around; /* Distribuye los elementos a lo largo de la línea y con la misma separación*/
+  align-items: stretch; /*Los ajusta para ajustarse al contenedor*/
+  overflow: auto;
+  box-sizing: border-box; /* Asegura que padding y border no afecten al tamaño */
+  border: 2px solid #DBA237; /* Borde delgado de color suave */
+  
+  border-radius: 15px; /* Bordes redondeados */
+  box-shadow: inset 10px 10px 100px #4E6786;
+}
+
+/* Para navegadores Webkit (Chrome, Safari) */
+.itemsSelected::-webkit-scrollbar {
+  width: 0px; /* Elimina la barra de desplazamiento */
+  height: 0px;
+}
+
+.itemsSelected::-webkit-scrollbar-thumb {
+  background: transparent; /* Hacemos el "thumb" (la parte deslizante) invisible */
+}
+
+body {
+  background: linear-gradient(135deg, #1e2a47, #5e6f99);
+  color: #fff; /* Texto blanco para contraste */
+  font-family: Arial, sans-serif; /* Fuente moderna */
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+}
+
+.placeHolderContainer{
+  font-size: 3rem; /* Tamaño grande */
+  font-weight: bold; /* Negrita */
+  
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Sombra sutil */
+  letter-spacing: 2px; /* Espaciado entre letras */
+  text-align: center; /* Centrado */
+
+}
+
+.itemsToSelect{
+  background-color: #2D3033;
+  width: 100%; /* Ocupa el 100% del ancho */
+  max-height: 55%; /* Establece una altura máxima para el contenedor */
+  justify-content: space-around;
+  align-items: stretch;
+  overflow-y: auto; /* Habilita el desplazamiento solo en el eje Y */
+}
+
+/* Para navegadores Webkit (Chrome, Safari) */
+.itemsToSelect::-webkit-scrollbar {
+  width: 0px; /* Elimina la barra de desplazamiento */
+  height: 0px;
+}
+
+.itemsToSelect::-webkit-scrollbar-thumb {
+  background: transparent; /* Hacemos el "thumb" (la parte deslizante) invisible */
+}
+
+
+.imgCard{
+  width: 150px;
+  height: 200px;
+}
+.card{
+  width: 150px;
+}
+.cardName{
+  text-align: center;
+  max-width: 100%; /* Asegura que no exceda el 100% del contenedor */
+  word-wrap: break-word; /* Hace que las palabras largas se dividan si es necesario */
+  overflow-wrap: break-word; /* Alternativa para asegurar el ajuste en todos los navegadores */
+  margin: 0 10px; /* Agregar un margen para evitar que el texto toque los bordes */
+}
+
